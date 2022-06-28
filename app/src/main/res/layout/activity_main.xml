@@ -1,18 +1,318 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/ekran"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/temaArkaplan"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="textPersonName"
+        android:paddingTop="130dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="60dp"
+        android:text="0"
+        android:textColor="@color/butonArkaplan"
+        android:textSize="34sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/butonArkaplan">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnac"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSifirla"
+                android:text="AC"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btnartieksi"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="+/-"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btnyuzde"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnOp"
+                android:text="%"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btnbolme"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnOp"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="8"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btncarpma"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnOp"
+                android:text="x"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btncikarma"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnOp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btntoplama"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnOp"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btnvirgul"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text=","
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btnnokta"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/butonArkaplan"
+                android:onClick="btnSayi"
+                android:text="."
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/btnesittir"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/temaArkaplan"
+                android:onClick="btnEsittir"
+                android:text="="
+                android:textSize="24sp"
+                app:strokeColor="@color/material_dynamic_neutral30"
+                app:strokeWidth="1dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
